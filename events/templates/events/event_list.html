@@ -1,0 +1,8 @@
+<h1>الأحداث المتاحة</h1>
+{% for event in events %}
+    <div>
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+        <a href="{% url 'event_detail' event.pk %}">التفاصيل</a>
+    </div>
+{% endfor %}
